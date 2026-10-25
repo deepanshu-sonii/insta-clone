@@ -37,24 +37,35 @@ body {
 }
 
 .searchbar {
-  width: -10%;
-  text-align: end;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .searchbar input {
-  background-color: #fafafa;
-  padding: 5px;
-  text-indent: 21px;
+  width: 220px;
+  padding: 8px 12px 8px 36px;
+  font-size: 14px;
   outline: none;
-  border: 1px solid rgb(218, 217, 217);
-  border-radius: 2px;
-  color: rgb(77, 77, 77);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: #efefef;
+  color: rgb(38, 38, 38);
 }
 
-.searchbar img {
+.searchbar i {
   position: absolute;
-  margin-left: -10.5rem;
-  margin-top: 0.25rem;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #8e8e8e;
+  pointer-events: none;
+}
+
+.searchbar input:focus {
+  border-color: rgb(200, 200, 200);
+  background-color: #fff;
 }
 
 .searchbar input::placeholder {
@@ -477,4 +488,34 @@ a {
 
 .footer a:hover {
   color: #ff0000;
+}
+
+/* Instagram logo with name */
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo i {
+  font-size: 30px;
+  color: #262626;
+}
+
+.logo .brand_text {
+  font-family: "Grand Hotel", cursive;
+  font-size: 30px;
+  color: #262626;
+}
+
+/* Post action icons */
+.actionBtns i {
+  font-size: 24px;
+  color: #262626;
+  cursor: pointer;
+  margin-right: 14px;
+}
+
+.actionBtns .right i {
+  margin-right: 0;
 }
